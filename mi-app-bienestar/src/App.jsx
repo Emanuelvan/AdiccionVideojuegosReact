@@ -1,9 +1,8 @@
-// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer'; // <--- Importar
+import Footer from './components/layout/Footer';
 
 // Pages
 import Home from './pages/Home';
@@ -34,16 +33,15 @@ function App() {
   );
 }
 
-// Estilos para asegurar el "Sticky Footer"
 const appStyles = {
   wrapper: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh', // Ocupa toda la altura de la pantalla
+    minHeight: '100vh',
   },
   mainContent: {
-    flex: 1, // Empuja el footer hacia abajo si hay espacio libre
-    backgroundColor: '#F9FAFB', // Color de fondo general suave
+    flex: 1,
+    backgroundColor: '#F9FAFB',
   }
 };
 

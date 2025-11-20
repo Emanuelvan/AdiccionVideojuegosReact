@@ -30,11 +30,11 @@ const Support = () => {
                         <div style={styles.phoneGrid}>
                             <div style={styles.phoneItem}>
                                 <span style={styles.phoneLabel}>Emergencias Generales</span>
-                                <a href="tel:123" style={styles.phoneNumber}>123 (Ejemplo)</a>
+                                <a href="tel:123" style={styles.phoneNumber}>123</a>
                             </div>
                             <div style={styles.phoneItem}>
                                 <span style={styles.phoneLabel}>Línea de Prevención (24/7)</span>
-                                <a href="tel:018000112439" style={styles.phoneNumber}>01-8000...</a>
+                                <a href="tel:106" style={styles.phoneNumber}>106</a>
                             </div>
                         </div>
                     </div>
