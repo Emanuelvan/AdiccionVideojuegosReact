@@ -1,5 +1,3 @@
-// src/data/quizData.js
-
 export const questions = [
   {
     id: 1,

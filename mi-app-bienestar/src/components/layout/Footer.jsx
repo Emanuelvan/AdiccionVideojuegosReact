@@ -59,13 +59,12 @@ const Footer = () => {
     );
 };
 
-/* --- ESTILOS CSS-IN-JS --- */
 const styles = {
     footer: {
-        backgroundColor: '#1F2937', // Gris oscuro (casi negro)
+        backgroundColor: '#1F2937',
         color: '#F3F4F6',
         paddingTop: '4rem',
-        marginTop: 'auto', // Esto empuja el footer al fondo si usas flexbox en el padre
+        marginTop: 'auto',
     },
     container: {
         maxWidth: '1200px',
@@ -88,7 +87,7 @@ const styles = {
         color: '#fff',
     },
     missionText: {
-        color: '#9CA3AF', // Gris medio
+        color: '#9CA3AF',
         lineHeight: '1.6',
         fontSize: '0.95rem',
         marginBottom: '1.5rem',
@@ -125,7 +124,7 @@ const styles = {
         transition: 'color 0.2s',
     },
     disclaimerBox: {
-        backgroundColor: 'rgba(255, 255, 255, 0.05)', // Fondo muy sutil
+        backgroundColor: 'rgba(255, 255, 255, 0.05)',
         padding: '1rem',
         borderRadius: '8px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -140,7 +139,7 @@ const styles = {
         borderTop: '1px solid rgba(255, 255, 255, 0.1)',
         padding: '1.5rem',
         textAlign: 'center',
-        backgroundColor: '#111827', // Un tono más oscuro aún
+        backgroundColor: '#111827',
     },
     copyright: {
         fontSize: '0.85rem',

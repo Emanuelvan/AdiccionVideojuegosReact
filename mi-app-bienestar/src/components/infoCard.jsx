@@ -2,7 +2,6 @@ import React from 'react';
 import { Info, AlertTriangle, Heart } from 'lucide-react';
 
 const InfoCard = ({ type, title, content }) => {
-    // Definir estilos según el tipo de tarjeta (info, alerta, consejo)
     const getStyle = () => {
         switch (type) {
             case 'warning':

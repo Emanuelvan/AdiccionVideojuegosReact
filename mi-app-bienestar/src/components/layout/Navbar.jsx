@@ -111,15 +111,12 @@ const styles = {
         alignItems: 'center',
         gap: '2rem',
         '@media (maxWidth: 768px)': { // Nota: Media queries no funcionan bien en estilos inline puros sin librerías
-            display: 'none', // En una app real, usaríamos clases CSS o styled-components para esto
+            display: 'none',
         }
     },
-    // Simulación de ocultar desktop links en móvil (Para React puro con inline styles es mejor usar lógica de ventana o CSS class)
-    // Para este ejemplo, asumiremos que usas un archivo CSS global para el media query:
-    // .desktop-links { display: flex; } @media(max-width: 768px) { .desktop-links { display: none; } }
 
     mobileMenuBtn: {
-        display: 'none', // Se mostraría vía CSS en móvil
+        display: 'none',
         background: 'none',
         border: 'none',
         cursor: 'pointer',

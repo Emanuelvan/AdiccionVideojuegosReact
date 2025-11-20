@@ -22,7 +22,6 @@ const Assessment = () => {
         }
     };
 
-    // Función para reiniciar el test
     const resetQuiz = () => {
         setCurrentQuestion(0);
         setScore(0);
@@ -31,7 +30,6 @@ const Assessment = () => {
 
     // Lógica para determinar el mensaje final según el puntaje
     const getResultContent = () => {
-        // El puntaje máximo posible es 15 (5 preguntas x 3 puntos)
         if (score <= 4) {
             return {
                 title: "Uso Saludable",
