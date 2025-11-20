@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { BookOpen, Clock, X, Brain, Zap, Activity, AlertCircle } from 'lucide-react';
-
-/* --- 1. DATOS DE LOS ARTÍCULOS (Simulando una Base de Datos) --- */
 const articlesData = [
     {
         id: 1,
@@ -79,7 +77,7 @@ const articlesData = [
     }
 ];
 
-/* --- 2. COMPONENTE PRINCIPAL --- */
+/* PRINCIPAL*/
 const Education = () => {
     const [selectedArticle, setSelectedArticle] = useState(null);
 
@@ -114,7 +112,7 @@ const Education = () => {
                 ))}
             </div>
 
-            {/* Modal de Lectura */}
+            {/* Lectura */}
             {selectedArticle && (
                 <div style={styles.modalOverlay} onClick={() => setSelectedArticle(null)}>
                     <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
@@ -142,7 +140,6 @@ const Education = () => {
     );
 };
 
-/* --- 3. ESTILOS --- */
 const styles = {
     container: {
         maxWidth: '1000px',
@@ -219,8 +216,8 @@ const styles = {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Fondo oscuro semitransparente
-        backdropFilter: 'blur(4px)', // Efecto borroso
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        backdropFilter: 'blur(4px)',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

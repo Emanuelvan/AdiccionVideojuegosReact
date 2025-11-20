@@ -4,8 +4,6 @@ import { Brain, ShieldCheck, Sparkles, ArrowRight } from 'lucide-react';
 const Home = () => {
     return (
         <div style={styles.container}>
-
-            {/* --- Hero Section (La Bienvenida) --- */}
             <section style={styles.hero}>
                 <div style={styles.heroContent}>
                     <span style={styles.badge}>Espacio Seguro y Anónimo 😈</span>
@@ -27,8 +25,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
-            {/* --- Features Section (¿Qué encontrarás aquí?) --- */}
             <section style={styles.features}>
                 <div style={styles.featureCard}>
                     <div style={styles.iconWrapper}><Brain size={32} color="#4f46e5" /></div>
@@ -48,8 +44,6 @@ const Home = () => {
                     <p>Técnicas de desconexión, gestión del tiempo y ejercicios para reducir la ansiedad.</p>
                 </div>
             </section>
-
-            {/* --- Quote / Motivation --- */}
             <section style={styles.quoteSection}>
                 <blockquote style={styles.quote}>
                     "No se trata de dejar de jugar para siempre, sino de que tú tengas el control del mando, no el juego sobre ti."
@@ -60,7 +54,6 @@ const Home = () => {
     );
 };
 
-// --- Estilos (CSS-in-JS básico para prototipado) ---
 const styles = {
     container: {
         maxWidth: '1200px',
@@ -97,7 +90,7 @@ const styles = {
         color: '#111827',
     },
     highlight: {
-        color: '#4f46e5', // Un azul/violeta moderno
+        color: '#4f46e5',
     },
     subtitle: {
         fontSize: '1.25rem',

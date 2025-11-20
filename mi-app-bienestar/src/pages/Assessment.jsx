@@ -34,7 +34,7 @@ const Assessment = () => {
             return {
                 title: "Uso Saludable",
                 desc: "Parece que tienes una relación equilibrada con los videojuegos. ¡Sigue así!",
-                color: "#10B981", // Verde
+                color: "#10B981",
                 bg: "#ECFDF5",
                 icon: <CheckCircle size={48} color="#10B981" />
             };
@@ -42,7 +42,7 @@ const Assessment = () => {
             return {
                 title: "Riesgo Moderado",
                 desc: "Hay algunas señales de alerta. Podrías estar usando el juego como vía de escape. Intenta establecer límites de tiempo.",
-                color: "#F59E0B", // Amarillo/Naranja
+                color: "#F59E0B",
                 bg: "#FFFBEB",
                 icon: <AlertTriangle size={48} color="#F59E0B" />
             };
@@ -50,7 +50,7 @@ const Assessment = () => {
             return {
                 title: "Riesgo Alto",
                 desc: "Tus respuestas indican que el juego está afectando significativamente tu vida. Te recomendamos hablar con un profesional.",
-                color: "#EF4444", // Rojo
+                color: "#EF4444",
                 bg: "#FEF2F2",
                 icon: <AlertOctagon size={48} color="#EF4444" />
             };
@@ -60,7 +60,7 @@ const Assessment = () => {
     return (
         <div style={styles.container}>
             {showResult ? (
-                /* --- VISTA DE RESULTADOS --- */
+                /* --- RESULTADOS --- */
                 <div style={styles.resultCard}>
                     <div style={{ ...styles.iconWrapper, backgroundColor: getResultContent().bg }}>
                         {getResultContent().icon}
@@ -88,13 +88,12 @@ const Assessment = () => {
                     </p>
                 </div>
             ) : (
-                /* --- VISTA DE PREGUNTAS --- */
+                /* --- PREGUNTAS --- */
                 <div style={styles.quizCard}>
                     <div style={styles.header}>
                         <span style={styles.questionCount}>
                             Pregunta {currentQuestion + 1} de {questions.length}
                         </span>
-                        {/* Barra de progreso simple */}
                         <div style={styles.progressBarBg}>
                             <div
                                 style={{
@@ -124,7 +123,6 @@ const Assessment = () => {
     );
 };
 
-// --- Estilos ---
 const styles = {
     container: {
         maxWidth: '600px',
@@ -182,7 +180,7 @@ const styles = {
         transition: 'all 0.2s',
         color: '#374151',
     },
-    // Estilos de Resultados
+    //  Resultados
     resultCard: {
         backgroundColor: 'white',
         padding: '3rem 2rem',

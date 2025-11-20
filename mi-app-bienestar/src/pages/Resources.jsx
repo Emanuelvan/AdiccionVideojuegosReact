@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Wind, Watch, List, X, Play, Square, RefreshCw } from 'lucide-react';
 
 const Resources = () => {
-    const [activeTool, setActiveTool] = useState(null); // 'breathing', 'timer', 'ideas', o null
+    const [activeTool, setActiveTool] = useState(null);
 
     return (
         <div style={styles.container}>
@@ -12,8 +12,6 @@ const Resources = () => {
                     Herramientas prácticas para gestionar la ansiedad y recuperar el control ahora mismo.
                 </p>
             </header>
-
-            {/* Si no hay herramienta activa, mostramos el menú */}
             {!activeTool && (
                 <div style={styles.grid}>
                     <ToolCard
@@ -39,8 +37,6 @@ const Resources = () => {
                     />
                 </div>
             )}
-
-            {/* Renderizado condicional de las herramientas */}
             <div style={styles.toolContainer}>
                 {activeTool === 'breathing' && <BreathingTool onClose={() => setActiveTool(null)} />}
                 {activeTool === 'timer' && <UrgeTimerTool onClose={() => setActiveTool(null)} />}
@@ -49,8 +45,6 @@ const Resources = () => {
         </div>
     );
 };
-
-/* --- SUB-COMPONENTES (HERRAMIENTAS) --- */
 
 // 1. TARJETA DE MENÚ
 const ToolCard = ({ title, desc, icon, onClick, color }) => (
@@ -61,9 +55,9 @@ const ToolCard = ({ title, desc, icon, onClick, color }) => (
     </div>
 );
 
-// 2. HERRAMIENTA DE RESPIRACIÓN (Animación CSS)
+// 2. HERRAMIENTA DE RESPIRACIÓN 
 const BreathingTool = ({ onClose }) => {
-    const [phase, setPhase] = useState('Inhala'); // Inhala, Sostén, Exhala, Sostén
+    const [phase, setPhase] = useState('Inhala');
     const [scale, setScale] = useState(1);
 
     useEffect(() => {
@@ -76,7 +70,7 @@ const BreathingTool = ({ onClose }) => {
             }
         };
         cycle();
-        return () => { }; // Cleanup no implementado por simplicidad del loop
+        return () => { };
     }, []);
 
     const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -97,9 +91,9 @@ const BreathingTool = ({ onClose }) => {
     );
 };
 
-// 3. HERRAMIENTA DE TEMPORIZADOR (Surfing the Urge)
+// 3. HERRAMIENTA DE TEMPORIZADOR
 const UrgeTimerTool = ({ onClose }) => {
-    const [timeLeft, setTimeLeft] = useState(600); // 10 minutos en segundos
+    const [timeLeft, setTimeLeft] = useState(600); // 10 minutos
     const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
@@ -139,7 +133,7 @@ const UrgeTimerTool = ({ onClose }) => {
     );
 };
 
-// 4. HERRAMIENTA DE IDEAS (Randomizer)
+// 4. IDEAS
 const IdeasTool = ({ onClose }) => {
     const activities = [
         "Sal a caminar 5 minutos sin el celular.",
@@ -173,7 +167,6 @@ const IdeasTool = ({ onClose }) => {
     );
 };
 
-/* --- ESTILOS CSS-IN-JS --- */
 const styles = {
     container: {
         maxWidth: '1000px',
@@ -219,7 +212,7 @@ const styles = {
         color: '#4B5563',
         lineHeight: '1.5',
     },
-    // Estilos para las herramientas activas
+
     toolContainer: {
         marginTop: '2rem',
         animation: 'fadeIn 0.3s ease',
@@ -245,7 +238,7 @@ const styles = {
         cursor: 'pointer',
         color: '#9CA3AF',
     },
-    // Estilos Breathing
+
     breathingCircleWrapper: {
         position: 'relative',
         width: '200px',
@@ -259,7 +252,7 @@ const styles = {
         position: 'absolute',
         width: '100%',
         height: '100%',
-        backgroundColor: '#DBEAFE', // Azul muy suave
+        backgroundColor: '#DBEAFE',
         borderRadius: '50%',
         opacity: 0.6,
     },
@@ -270,7 +263,7 @@ const styles = {
         fontWeight: '700',
         color: '#1E40AF',
     },
-    // Estilos Timer
+
     timerDisplay: {
         fontSize: '4rem',
         fontFamily: 'monospace',
@@ -278,7 +271,7 @@ const styles = {
         color: '#374151',
         margin: '2rem 0',
     },
-    // Estilos Botones
+
     buttonGroup: {
         display: 'flex',
         gap: '1rem',
@@ -308,7 +301,7 @@ const styles = {
         alignItems: 'center',
         gap: '0.5rem',
     },
-    // Estilos Ideas
+
     ideaCard: {
         backgroundColor: '#F3F4F6',
         padding: '2rem',
