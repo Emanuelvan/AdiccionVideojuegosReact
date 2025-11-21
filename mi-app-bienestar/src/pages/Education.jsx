@@ -74,6 +74,25 @@ const articlesData = [
                 </ol>
             </>
         )
+    },
+    {
+        id: 5,
+        title: "¿Hobby o Adicción?",
+        category: "Diagnóstico",
+        readTime: "5 min",
+        icon: <AlertCircle size={32} color="#EF4444" />,
+        color: "#FEF2F2",
+        content: (
+            <>
+                <p>Jugar videojuegos no es malo per se. El problema no es la actividad, es la relación con ella.</p>
+                <h3>Las 3 C de la adicción</h3>
+                <ol>
+                    <li><strong>Control:</strong> ¿Puedes parar cuando te lo propones?</li>
+                    <li><strong>Consecuencias:</strong> ¿Sigues jugando a pesar de tener problemas en el trabajo, estudios o pareja?</li>
+                    <li><strong>Craving (Deseo):</strong> ¿Sientes una preocupación mental constante por cuándo volverás a jugar?</li>
+                </ol>
+            </>
+        )
     }
 ];
 
@@ -112,6 +131,30 @@ const Education = () => {
                 ))}
             </div>
 
+            {/* Lectura */}
+            {selectedArticle && (
+                <div style={styles.modalOverlay} onClick={() => setSelectedArticle(null)}>
+                    <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+
+                        <button style={styles.closeButton} onClick={() => setSelectedArticle(null)}>
+                            <X size={24} />
+                        </button>
+
+                        <div style={styles.modalHeader}>
+                            <span style={styles.modalCategory}>{selectedArticle.category}</span>
+                            <h2 style={styles.modalTitle}>{selectedArticle.title}</h2>
+                            <div style={styles.modalMeta}>
+                                <Clock size={16} /> Tiempo de lectura: {selectedArticle.readTime}
+                            </div>
+                        </div>
+
+                        <div style={styles.articleBody}>
+                            {selectedArticle.content}
+                        </div>
+
+                    </div>
+                </div>
+            )}
             {/* Lectura */}
             {selectedArticle && (
                 <div style={styles.modalOverlay} onClick={() => setSelectedArticle(null)}>

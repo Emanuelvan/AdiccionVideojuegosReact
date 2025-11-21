@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "mi-app-bienestar",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build - mi-app-bienestar",
+			"detail": "vite build"
+		},
+		{
+			"type": "npm",
+			"script": "dev",
+			"path": "mi-app-bienestar",
+			"problemMatcher": [],
+			"label": "npm: dev - mi-app-bienestar",
+			"detail": "vite"
+		}
+	]
+}
